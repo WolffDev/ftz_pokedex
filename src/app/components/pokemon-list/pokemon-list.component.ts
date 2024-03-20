@@ -15,6 +15,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
   public searchTerm: string = '';
   public page = 1;
   public totalPokemons = 0;
+  public loading = true;
 
   private originalPokemonList: Pokemon[] = [];
   private deletedePokemons: number[] = [];
@@ -22,16 +23,12 @@ export class PokemonListComponent implements OnInit, OnDestroy {
 
   constructor(
     private pokeService: PokeApiService,
-    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
     this.deletedePokemons = this.pokeService.getDeletedPokemons();
 
-    this.route.queryParams.subscribe((params) => {
-      const offset = params['offset'] || 0;
       this.getPokemons();
-    });
   }
 
   ngOnDestroy(): void {
@@ -40,6 +37,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
   }
 
   private populatePokemonList() {
+    this.loading = false;
     this.pokemonList = this.originalPokemonList.filter(
       (pokemon) => !this.deletedePokemons.includes(pokemon.id)
     );

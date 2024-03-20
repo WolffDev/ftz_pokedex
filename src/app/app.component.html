@@ -1,1 +1,10 @@
-<router-outlet />
+<div class="wrapper">
+    <div class="pokedex">
+
+        <a class="header-link" [routerLink]="['/']">
+            <img src="/assets/pokeball-header.png" />
+            <h1>FTZ Pokedex</h1>
+        </a>
+            <router-outlet />
+        </div>
+</div>

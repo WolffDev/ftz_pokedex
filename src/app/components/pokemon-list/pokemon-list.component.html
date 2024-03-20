@@ -1,14 +1,15 @@
-<input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" placeholder="search for a pokemon">
+<input type="search" [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" placeholder="search for a pokemon">
 
-<div *ngIf="pokemonList.length > 0; else loading">
-    <div *ngFor="let pokemon of pokemonList | paginate: {itemsPerPage: 10, currentPage: page, totalItems: totalPokemons}">
-        <button (click)="deletePokemon(pokemon.id)">delete</button><a [routerLink]="['/pokemon', pokemon.id]" (click)="setSelectedPokemon(pokemon)" >{{pokemon.name}}</a>
+<div class="list-wrapper" *ngIf="!loading; else loadingTemplate">
+    <div class="list-item" *ngFor="let pokemon of pokemonList | paginate: {itemsPerPage: 10, currentPage: page, totalItems: totalPokemons}">
+        <a [routerLink]="['/pokemon', pokemon.id]" (click)="setSelectedPokemon(pokemon)" ><img [src]="pokemon.sprites.other?.dream_world?.front_default" alt="{{pokemon.name}}" />{{pokemon.name | titlecase}}</a>
+        <button (click)="deletePokemon(pokemon.id)">delete</button>
     </div>
 </div>
 
 <pagination-controls (pageChange)="page = $event; pokemonList = []; getPokemons()"></pagination-controls>
 
 
-<ng-template #loading>
+<ng-template #loadingTemplate>
     <p>Loading...</p>
 </ng-template>

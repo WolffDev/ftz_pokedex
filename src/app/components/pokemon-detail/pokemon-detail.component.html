@@ -1,2 +1,16 @@
-<p>pokemon-detail works!</p>
-<p>Have to fetch the details for the pokemon here! {{pokemonId}}</p>
+<div class="container">
+  <div
+    id="card"
+    class="background-{{pokemonData?.types?.[0]?.type?.name || 'normal'}}"
+  >
+    <p class="hp">
+      HP <span>{{pokemonData?.stats?.[0]?.base_stat}}</span>
+    </p>
+    <img src="{{ pokemonData?.sprites?.other?.dream_world?.front_default }}" />
+    <h2 class="poke-name">{{ pokemonData?.name | titlecase }}</h2>
+    <div class="types type-{{pokemonData?.types?.[0]?.type?.name || 'normal'}}">
+      {{pokemonData?.types?.[0]?.type?.name || 'normal'}}
+    </div>
+    <app-pokemon-stats [statsData]="generateStatsData"></app-pokemon-stats>
+  </div>
+</div>

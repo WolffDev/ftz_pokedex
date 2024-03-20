@@ -17,6 +17,11 @@ type PokemonList = {
     url: string;
 }
 
+export type StatsData = {
+    label: string;
+    value: number;
+}
+
 export type Pokemon = {
     abilities:                Ability[];
     base_experience:          number;

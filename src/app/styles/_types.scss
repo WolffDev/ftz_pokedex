@@ -1,0 +1,101 @@
+@mixin pokemonTypes {
+  .type-bug {
+    background-color: #26de81;
+  }
+  .type-dragon {
+    background-color: #ffeaa7;
+  }
+  .type-electric {
+    background-color: #fed330;
+  }
+  .type-fairy {
+    background-color: #ff0069;
+  }
+  .type-fighting {
+    background-color: #30336b;
+  }
+  .type-fire {
+    background-color: #f0932b;
+  }
+  .type-flying {
+    background-color: #81ecec;
+  }
+  .type-grass {
+    background-color: #00b894;
+  }
+  .type-ground {
+    background-color: #efb549;
+  }
+  .type-ghost {
+    background-color: #a55eea;
+  }
+  .type-ice {
+    background-color: #74b9ff;
+  }
+  .type-normal {
+    background-color: #95afc0;
+  }
+  .type-poison {
+    background-color: #6c5ce7;
+  }
+  .type-psychic {
+    background-color: #a29bfe;
+  }
+  .type-rock {
+    background-color: #2d3436;
+  }
+  .type-water {
+    background-color: #0190ff;
+  }
+}
+
+@mixin pokemonBackground {
+  .background-bug {
+    background: radial-gradient(circle at 50% 0%, #26de81 30%, #ffffff 30%);
+  }
+  .background-dragon {
+    background: radial-gradient(circle at 50% 0%, #ffeaa7 30%, #ffffff 30%);
+  }
+  .background-electric {
+    background: radial-gradient(circle at 50% 0%, #fed330 30%, #ffffff 30%);
+  }
+  .background-fairy {
+    background: radial-gradient(circle at 50% 0%, #ff0069 30%, #ffffff 30%);
+  }
+  .background-fighting {
+    background: radial-gradient(circle at 50% 0%, #30336b 30%, #ffffff 30%);
+  }
+  .background-fire {
+    background: radial-gradient(circle at 50% 0%, #f0932b 30%, #ffffff 30%);
+  }
+  .background-flying {
+    background: radial-gradient(circle at 50% 0%, #81ecec 30%, #ffffff 30%);
+  }
+  .background-grass {
+    background: radial-gradient(circle at 50% 0%, #00b894 30%, #ffffff 30%);
+  }
+  .background-ground {
+    background: radial-gradient(circle at 50% 0%, #efb549 30%, #ffffff 30%);
+  }
+  .background-ghost {
+    background: radial-gradient(circle at 50% 0%, #a55eea 30%, #ffffff 30%);
+  }
+  .background-ice {
+    background: radial-gradient(circle at 50% 0%, #74b9ff 30%, #ffffff 30%);
+  }
+  .background-normal {
+    background: radial-gradient(circle at 50% 0%, #95afc0 30%, #ffffff 30%);
+  }
+  .background-poison {
+    background: radial-gradient(circle at 50% 0%, #6c5ce7 30%, #ffffff 30%);
+  }
+  .background-psychic {
+    background: radial-gradient(circle at 50% 0%, #a29bfe 30%, #ffffff 30%);
+  }
+  .background-rock {
+    background: radial-gradient(circle at 50% 0%, #2d3436 30%, #ffffff 30%);
+  }
+  .background-water {
+    background: radial-gradient(circle at 50% 0%, #0190ff 30%, #ffffff 30%);
+  }
+}
